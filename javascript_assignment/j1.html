@@ -1,0 +1,24 @@
+<!Doctype HTML>
+<html>
+<head>
+	<title>javascript first question</title>
+		<script type="text/javascript">
+		function myFunction(){
+			var amount= parseFloat(prompt("enter the amount"));
+            var interest_rate = parseFloat(prompt("enter the interest rate"));
+            var no_of_years = parseFloat(prompt("enter the number of years"));
+            var simple_interest= (amount * interest_rate * no_of_years)/100;
+            document.write("simple interest is:"+ simple_interest);
+            
+        }
+
+         </script>
+
+</head>
+<body>
+<center>
+		<p> click this button to calculate simple interest</p>
+	
+	<button onclick="myFunction()">Calculate simple interest</button></center>
+</body>
+</html>

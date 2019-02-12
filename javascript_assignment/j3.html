@@ -1,0 +1,23 @@
+<html>
+<head>
+<title>question 3</title>
+</head>
+<body>
+  <script language="JavaScript">
+    function CalculateArea(){
+        var radius =document.form1.radiuscircle.value;
+        document.write("<P>The area of the circle is " + (radius * radius * Math.PI) + "</p>");
+    }
+    </script>
+    <center>
+      <form name=form1>
+        Enter the radius of circle:
+       <input type="text" name="radiuscircle" size=10>
+       <br>
+       <br>
+       <br>
+       <input type="button" value="Calculate" onClick='CalculateArea();'>  
+    </form>
+  </center>
+</body>
+</html>
