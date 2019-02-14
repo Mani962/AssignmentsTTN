@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>eigth question</title>
+	<style>
+  .test
+   { background-color:yellow;}
+ 
+</style>
+
+</head>
+<body>
+<p>Select food from the list.</p> 
+<select>
+  <option value="">Select items</option>
+  <option value="idli">idli</option>
+  <option value="dosa">dosa</option>
+  <option value="upma">upma</option>
+  <option value="burger">burger</option>
+  </select>
+
+<p>The orders ordered by you are: <span><p id="para"></p></span> </p>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function() { 
+         $('select').click(function() {
+         $("#para").append(this.value+" <br>")
+});
+});
+    
+</script>
+</body>
+</html>

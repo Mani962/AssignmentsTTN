@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script> 
+$(document).ready(function(){
+    $("#f").hover(function(){
+        $(".p").slideToggle("slow");
+    });
+});
+</script>
+
+<style> 
+ #f{
+    padding: 10px;
+    text-align: center;
+    background-color: #ff0000;
+    border: solid 1px #f0332f;	
+}
+.p{
+    padding: 20px;
+    display: none;
+}
+</style>
+</head>
+<body>
+ 
+<div id="f">Hover to slide the panel down or up</div>
+<div class="p">audi</div>
+<div class="p">benz</div>
+<div class="p">ford</div>
+<div class="p">baleno</div>
+</body>
+</html>

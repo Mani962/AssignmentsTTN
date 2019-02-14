@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+
+    <p style="height:35px">G L Bajaj</p>
+	<p style="height:30px">IIMT</p>
+	<p style="height:45px">KCC</p>
+
+</body>
+<script>
+$(document).ready(function(){
+	var max=0;
+   $("p").each(function(i, element) {
+   	   	var h = $(this).height(); 
+   	   	max = h > max ? h : max;
+   	});
+   	alert("Max height of P element is:"+max);
+  });
+</script>
+</html>

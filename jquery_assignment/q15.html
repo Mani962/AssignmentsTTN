@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>15question</title>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+<div>click this button to send request to AJAX</div>
+<button>click this </button>
+	<script>
+		$(document).ready(function(){
+   	$("button").click(function() {
+       	$.ajax({ method: 'GET' ,url: "https://jsonplaceholder.typicode.com/todos/1", success: function(result) {
+       	console.log(result);
+         $("div").html(JSON.stringify(result));
+       	}});
+   	});
+   });
+</script>
+</body>
+</html

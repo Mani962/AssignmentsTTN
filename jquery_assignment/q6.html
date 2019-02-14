@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>sixth question</title>
+	<style type="text/css">
+		div, p, button{
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+<div>
+<p> this is first paragraph inside div tag.</p>
+<p>this is second paragraph inside the div tag.</p>
+<p>this is third paragraph inside the div tag.</p>
+this text is directly inside the div tag.
+</div>
+<center>
+	<button id="button1">change all div tags with p tags </button>
+</center>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$("#button1").click(function() {
+		
+			$("div").replaceWith($("<p>"+$("div").text()+"</p>"));
+		});
+		
+	});
+</script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>fifth question</title>
+	<style type="text/css">
+		.target
+		{
+			font-size: 100%;
+			text-align: center;
+		}
+	</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+<div id="main">
+	<p class="target"> this is first paragraph </p>
+</div>
+
+<div id="notmain">
+	<p class="target">this is second paragraph</p>
+</div>
+<center><button class="target">change the font color whose parent has main as id</button></center>
+<script type="text/javascript">
+		$(document).ready(function() {
+			$("button").click(function() {
+				$(".target").parent("#main").css('font-size', '500%');
+			});
+			
+		});
+	</script>
+</body>
+</html>

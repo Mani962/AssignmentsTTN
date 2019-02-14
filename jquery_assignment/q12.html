@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>twelth question</title>
+	<style type="text/css">
+		div{
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+<div id="parent">
+<h1>this is first Heading inside  div tag.</h1>
+<li class="child">this is second paragraph inside the parent div tag.</li>
+<li class="child">this is first paragraph inside the parent div tag.</li>
+<li class="child">this is second paragraph inside the parent div tag.</li>
+</div> 
+</body>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"> </script>
+<script>
+$(document).ready(function(){  
+    $("#parent").click(function(e){
+    if(e.target.tagName !== 'LI')
+    {
+           alert("div is clicked");
+     }
+})
+});
+</script> 
+</html>
