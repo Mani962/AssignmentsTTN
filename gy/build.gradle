@@ -1,0 +1,45 @@
+/*
+apply plugin :'java'
+sourceSets{
+     main {
+            resources{
+                srcDirs = ['src/main/resources']
+                exclude 'file1.txt'
+            }
+     }
+
+ }
+*/
+/*
+
+apply plugin :'java'
+sourceSets{
+    main{
+        java{
+            srcDirs =['src/main/java']
+        }
+    }
+}*/
+apply plugin : 'java'
+repositories {
+    jcenter()
+}
+/*
+repositories {
+    mavenCentral()
+*/
+/*
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    compile group: 'org.apache.commons', name: 'commons-lang3',
+            version: '3.8.1'
+}
+jar{
+    from configurations.compile.collect{ zipTree it }
+}
+
+jar{
+    manifest.attributes "Main-Class" : "ApacheClass"
+}*/
+apply plugin: 'java'
+apply from :'mytasks.gradle'
