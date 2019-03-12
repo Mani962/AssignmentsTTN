@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- question 1 -->
+    <bean id="databaseconnection" class="QuestionOne.Database">
+        <property name="port" value="3333"/>
+        <property name="name" value="oracledriver"/>
+    </bean>
+
+    <!-- question 2 -->
+    <bean id="databaseconnection2" class="QuestionTwo.Database">
+        <property name="port" value="3333"/>
+        <property name="name" value="oracledriver"/>
+    </bean>
+
+    <!--question 3-->
+    <bean id="teaRestaurant" class="QuestionThree.Restaurant">
+        <property name="hotDrink" ref="tea"/>
+    </bean>
+    <bean id="tea" class="QuestionThree.Tea"/>
+    <bean id="expressTea" class="QuestionThree.ExpressTea"/>
+
+   <!-- Question 4-->
+
+    <bean class="QuestionThree.Restaurant" id="teaExpressRestaurant">
+        <property name="hotDrink">
+            <bean class="QuestionThree.ExpressTea"/>
+        </property>
+    </bean>
+
+    <!--question5-->
+
+    <bean name="complexBean" class="QuestionFive.Complex">
+        <property name="list">
+            <list>
+                <value>maths</value>
+                <value>physics</value>
+                <value>chemistry</value>
+                <value>computer</value>
+            </list>
+        </property>
+
+        <property name="set">
+            <set>
+                <value>manidhar</value>
+                <value>jaffa</value>
+                <value>yashwanth</value>
+                <value>vamsi</value>
+            </set>
+        </property>
+
+        <property name="map">
+            <map>
+                <entry key="1" value="sachin"/>
+                <entry key="2" value="dravid"/>
+                <entry key="3" value="malinga"/>
+                <entry key="4" value="peter"/>
+            </map>
+        </property>
+
+    </bean>
+
+</beans>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+   <!-- question 6-->
+    <bean id="hotDrink" class="QuestionSix.Tea"/>
+    <bean id="restaurant" class="QuestionSix.Restaurant" autowire="byName"/>
+
+    <bean id="restaurant1" class="QuestionSix.Restaurant" autowire="byType"/>
+
+    <!--<bean id="hotDrink2" class="QuestionThree.ExpressTea" primary="true"/>-->
+    <bean id="restaurant12" class="QuestionSix.Restaurant" autowire="constructor"/>
+
+    <!-- Question 7 -->
+    <bean id="hotDrink1" class="QuestionSeven.Tea"/>
+        <bean id="teaRestaurant1" class="QuestionSeven.Restaurant1" scope="prototype">
+        <property name="hotDrink" ref="hotDrink1"/>
+    </bean>
+
+
+</beans>
