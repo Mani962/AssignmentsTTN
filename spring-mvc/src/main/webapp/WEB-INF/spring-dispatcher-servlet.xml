@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns="http://www.springframework.org/schema/beans"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/mvc
+        http://www.springframework.org/schema/mvc/spring-mvc.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <mvc:annotation-driven/>
+
+    <!--Question1-->
+    <!-- <bean class="org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping"/>
+        <bean name="/hello" class="com.ttn.jaffa.Question1.StudentController"/>-->
+
+    <!--Question2-->
+    <!--<bean class="org.springframework.web.servlet.mvc.support.ControllerClassNameHandlerMapping"/>
+    <bean name="/student" class="com.ttn.jaffa.Question2.StudentController"/>-->
+
+    <bean id="viewResolver"
+          class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="prefix">
+            <value>/WEB-INF/</value>
+        </property>
+        <property name="suffix">
+            <value>.jsp</value>
+        </property>
+    </bean>
+
+    <!--<context:component-scan base-package="com.ttn.jaffa.Question3"/>-->
+
+    <!--<context:component-scan base-package="com.ttn.jaffa.Question4"/>-->
+
+    <!--<context:component-scan base-package="com.ttn.jaffa.Question5"/>-->
+    <!--<context:component-scan base-package="com.ttn.jaffa.Question6"/>-->
+    <!--<context:component-scan base-package="com.ttn.jaffa.Question7"/>-->
+    <!--<context:component-scan base-package="com.ttn.jaffa.Question8"/>-->
+    <!--<context:component-scan base-package="com.ttn.jaffa.Question9"/>-->
+    <context:component-scan base-package="com.ttn.jaffa.Question10"/>
+</beans>
