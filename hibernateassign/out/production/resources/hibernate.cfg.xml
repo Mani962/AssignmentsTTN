@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <!--Database connection settings -->
+        <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/hibernateDB</property>
+        <property name="hibernate.connection.username">mani</property>
+        <property name="hibernate.connection.password">mani</property>
+
+        <!--JDBC connection pool-->
+        <property name="connection.pool_size">10</property>
+
+        <!-- SQL Dialect-->
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+
+        <!--echo all executed SQL-->
+        <property name="show_sql">true</property>
+
+        <!--drop or re-create database schema at startup-->
+        <property name="hbm2ddl.auto">create</property>
+       <!--question3
+       <property name="hbm2ddl.auto">create</property>
+       -->
+
+      <!--question4
+       <property name="hbm2ddl.auto">update</property>
+       -->
+
+        <!-- question5
+        <property name="hbm2ddl.auto">create-drop</property>
+        -->
+
+
+        <!--Annotated entity class-->
+
+   <!--question1 and 2-->
+        <!--<mapping class="com.ttn.hibernate.QuestionOneandTwo.Author"/>-->
+
+     <!--   question 3
+        <mapping class="com.ttn.hibernate.QuestionThree.AuthorThree"/>
+-->
+     <!-- question 6
+        <mapping class="com.ttn.hibernate.QuestionSix.AuthorSix"/>
+
+-->
+        <!--QUESTION 8-->
+        <!--<mapping class="com.ttn.hibernate.QuestionThree.AuthorThree"/>-->
+
+        <!--Question 9-->
+        <!--<mapping class="com.ttn.hibernate.QuestionNine.AuthorNine"/>-->
+
+<!--QUestion 10-->
+        <!--<mapping class="com.ttn.hibernate.QuestionTenandEleven.AuthorTen"/>-->
+
+        <!--Question 11 and 12-->
+        <!--<mapping class="com.ttn.hibernate.QuestionTwelveandThirteen.AuthorTwelve"/>-->
+
+        <!--QUESTION14 AND 15-->
+        <!--<mapping class="com.ttn.hibernate.QuestionFourteenandFifteen.AuthorFifteen"/>-->
+        <!--<mapping class="com.ttn.hibernate.QuestionFourteenandFifteen.BookSeventeen"/>-->
+
+        <!--Question 16  UNi diredctional-->
+        <!--<mapping class="com.ttn.hibernate.QuestionSixteen.AuthorSixteen"/>-->
+        <!--<mapping class="com.ttn.hibernate.QuestionSixteen.BookSixteen"/>-->
+
+ <!--Q16 one to many == bidirectional-->
+        <!--<mapping class="com.ttn.hibernate.QuestionSixteenA.AuthorSixteenA"/>-->
+        <!--<mapping class="com.ttn.hibernate.QuestionSixteenA.BookSixteenA"/>-->
+
+        <!--Q16 one to many == bidirectional WITHOUT ADDITIONAL TABLES>-->
+
+        <!--<mapping class="com.ttn.hibernate.QuestionSixteenB.AuthorSixteenB"/>-->
+        <!--<mapping class="com.ttn.hibernate.QuestionSixteenB.BookSixteenB"/>-->
+
+<!--QUESTION 17-->
+        <mapping class="com.ttn.hibernate.QuestionSeventeen.AuthorSeventeen"/>
+        <mapping class="com.ttn.hibernate.QuestionSeventeen.BookSeventeen"/>
+
+    </session-factory>
+</hibernate-configuration>
