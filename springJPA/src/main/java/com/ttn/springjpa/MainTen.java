@@ -4,6 +4,8 @@ import com.ttn.springjpa.service.PersonTenService;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
+import java.util.Arrays;
+
 public class MainTen {
     public static void main(String[] args) {
         ConfigurableApplicationContext ctx = new AnnotationConfigApplicationContext("com.ttn.springjpa.config", "com.ttn.springjpa.service");
@@ -38,10 +40,10 @@ public class MainTen {
 //        System.out.println("This is example of Not Method");
 //        personTenService.findByFirstNameNot("Peter");
 //
-//        System.out.println("This is example of In Method");
-//        personTenService.findByAgeIn(Arrays.asList(23,25,27));
-        System.out.println("This is example of Ignore Method");
-        personTenService.findByFirstNameIgnoreCase("manidhar");
+        System.out.println("This is example of In Method");
+        personTenService.findByAgeIn(Arrays.asList(23,25,27));
+//        System.out.println("This is example of Ignore Method");
+//        personTenService.findByFirstNameIgnoreCase("manidhar");
 
     }
 }

@@ -118,13 +118,13 @@ public class PersonTenService {
         }
     }
 
-  /*  public void findByAgeIn(List<Integer> agelist) {
+   public void findByAgeIn(List<Integer> agelist) {
         List<PersonTen> list = personTenRepository.findByAgeIn(agelist);
         Iterator<PersonTen> iterator = list.iterator();
         while (iterator.hasNext()) {
             System.out.println(iterator.next());
         }
-    }*/
+    }
 
     public void findByFirstNameIgnoreCase(String string) {
         List<PersonTen> list = personTenRepository.findByFirstNameIgnoreCase(string);

@@ -28,7 +28,7 @@ public interface PersonTenRepository extends CrudRepository<PersonTen, Integer> 
 
     List<PersonTen> findByFirstNameNot(String name);
 
-    List<PersonTen> findByAgeIn(String agelist);
+    List<PersonTen> findByAgeIn(List<Integer> agelist);
 
     List<PersonTen> findByFirstNameIgnoreCase(String name);
 

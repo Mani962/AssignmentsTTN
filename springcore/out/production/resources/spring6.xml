@@ -11,12 +11,11 @@
     <bean id="restaurant1" class="QuestionSix.Restaurant" autowire="byType"/>
 
     <!--<bean id="hotDrink2" class="QuestionThree.ExpressTea" primary="true"/>-->
-    <bean id="restaurant2" class="QuestionSix.Restaurant" autowire="constructor"/>
+    <bean id="restaurant12" class="QuestionSix.Restaurant" autowire="constructor"/>
 
     <!-- Question 7 -->
     <bean id="hotDrink1" class="QuestionSeven.Tea"/>
-
-    <bean id="teaRestaurant1" class="QuestionSeven.Restaurant" scope="prototype">
+        <bean id="teaRestaurant1" class="QuestionSeven.Restaurant1" scope="prototype">
         <property name="hotDrink" ref="hotDrink1"/>
     </bean>
 
