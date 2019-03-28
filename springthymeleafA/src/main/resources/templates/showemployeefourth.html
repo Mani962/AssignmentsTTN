@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Fourth Question</title>
+</head>
+<body>
+<table border="1px solid black ">
+<tr>
+    <th>Name</th>
+    <th>Password</th>
+    <th>Competency</th>
+    <th>Salary</th>
+    <th>Mentor</th>
+</tr>
+    <tr th:each="empl :${employeefour}">
+    <td th:text="${empl.name}"></td>
+    <td th:text="${empl.password}"></td>
+    <td th:text="${empl.competency}"></td>
+    <td th:text="${empl.salary}"></td>
+    <td th:text="${empl.mentor}"></td>
+</tr>
+</table>
+</body>
+</html>
