@@ -1,0 +1,113 @@
+<%@page import="java.sql.*,place.*" %>
+<html>
+<head>
+<style>
+table.redTable {
+  border: 2px solid #A40808;
+  background-color: #EEE7DB;
+  width: 100%;
+  text-align: center;
+  border-collapse: collapse;
+}
+table.redTable td, table.redTable th {
+  border: 1px solid #AAAAAA;
+  padding: 3px 2px;
+}
+table.redTable tbody td {
+  font-size: 13px;
+}
+table.redTable tr:nth-child(even) {
+  background: #F5C8BF;
+}
+table.redTable thead {
+  background: #A40808;
+}
+table.redTable thead th {
+  font-size: 19px;
+  font-weight: bold;
+  color: #FFFFFF;
+  text-align: center;
+  border-left: 2px solid #A40808;
+}
+table.redTable thead th:first-child {
+  border-left: none;
+}
+
+table.redTable tfoot {
+  font-size: 13px;
+  font-weight: bold;
+  color: #FFFFFF;
+  background: #A40808;
+}
+table.redTable tfoot td {
+  font-size: 13px;
+}
+table.redTable tfoot .links {
+  text-align: right;
+}
+table.redTable tfoot .links a{
+  display: inline-block;
+  background: #FFFFFF;
+  color: #A40808;
+  padding: 2px 8px;
+  border-radius: 5px;
+}
+</style>
+</head>
+<body>
+<%
+  String msg=request.getParameter("msg");
+if(msg!=null)
+{
+	out.println("<html><body>");
+	out.println("<center><font color=green size=5 text-align=center>"+msg);
+	out.println("</font></center>");
+	out.println("</body></html>");
+}
+%>
+<h4><a href="Sdashboard.jsp">&#10094; BACK</a></h4>
+<h1><center>All Companies List To View Profiles</center></h1>
+<table class="redTable" style="height: 289px;" width="458">
+<thead>
+<tr>
+<th>Company ID</th>
+<th>Company Name</th>
+<th>Click to view Profile and options</th>
+</tr>
+</thead>
+<tfoot>
+<tr>
+<td colspan="5">
+<div class="links"><a href="#">&laquo;</a> <a class="active" href="#">1</a> <a href="#">2</a> <a href="#">3</a> <a href="#">4</a> <a href="#">&raquo;</a></div>
+</td>
+</tr>
+</tfoot>
+<tbody>
+<% 
+Connection con=ConnectionProvider.getCon();
+Statement st=con.createStatement();
+ResultSet rs=st.executeQuery("select *from company_db");
+while(rs.next())
+{
+%>
+<tr style="height:62px">
+<td><%=rs.getString(1)%></td><td><%=rs.getString(2)%></td>
+<td>
+<a href="companyform3.jsp?company_id=<%=rs.getString(1)%>"><b>View Profile</b></a>
+ <%System.out.println("126"); %>
+
+  <a href="disapplycompanies.jsp?company_id=<%=rs.getString(1)%>">Disapply</a>
+ <%System.out.println("123456"); %>
+ 
+<a href="applycompanies.jsp?company_id=<%=rs.getString(1)%>">Apply</a>
+ 
+</td>
+</tr>
+</tbody>
+<%
+}
+con.close();
+%>
+</table>
+</body>
+</html>

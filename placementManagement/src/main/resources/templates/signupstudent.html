@@ -1,0 +1,61 @@
+<html xmlns:th="http://www.w3.org/1999/xhtml" >
+<head>
+<title> Signup student Form  </title>   
+    <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+ <link rel="stylesheet" href="css/font-awesome.min.css">
+     <link rel="stylesheet" href="css/bootstrap.css">
+ 
+  <!-- Bootstrap CSS File -->
+  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <link rel="stylesheet" type="text/css" href="css/style2.css">
+
+</head>
+<body>
+ <div class="container">
+  <div class="login-form">
+  <div class="main-div">
+    <div class="panel">
+     <div class="row">
+        <div class="col-sm-3">
+        </div>
+        <div class="col-sm-6">
+        <center><h1>Sign Up form</h1></center>
+   <form action="/register" object="${student}" method="post" >
+       <div class="form-group">
+           <label>Roll No:</label>
+           <input type="number" class="form-control" name="rollNo" required>
+       </div>
+ <div class="form-group">
+  <label>User Name:</label>
+  <input type="text" class="form-control" name="userName" required>
+</div>
+  <div class="form-group">
+   <label>Password:</label>
+    <input type="password" class="form-control" name="password" required>
+  </div>
+   <div class="form-group">
+    <label>E-mail:</label>
+  <input type="email" class="form-control" name="email" required>
+  </div>
+   <div class="form-group">
+    <label>Mobile Number:</label>
+  <input type="number" class="form-control" maxlength="10" name="mobilenumber" required>
+  </div>
+  <button type="submit" class="btn btn-primary ml-5" >Submit</button>
+</form>
+   </div>
+   <div class="col-sm-3">
+   </div>
+   
+ </div>
+ </div>
+ </div>
+</div>
+</div>
+</body>    
+</html>

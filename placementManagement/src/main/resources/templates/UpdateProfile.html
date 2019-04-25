@@ -1,0 +1,113 @@
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+  <head>
+<title>student profile</title>
+  
+  <meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+ <link rel="stylesheet" href="css/font-awesome.min.css">
+     <link rel="stylesheet" href="css/bootstrap.css">
+    <!-- Bootstrap CSS File -->
+  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+
+  </head>
+ <body>
+
+<div class="container">
+<h1 class="form-heading"><center>UPDATE STUDENT PROFILE</center></h1><a href="Sdashboard.html">&#10094; BACK</a>
+        <form action="" method="post">
+
+
+           <div class="form-row">
+  
+        <div class="form-group col-md-6">
+           <label >Username</label>
+            <input type="text" class="form-control" name="username"th:text="${email}" readonly>
+
+        </div>
+        <div class="form-group col-md-6">
+<label for="name">System Id</label>
+           
+            <input type="number" class="form-control" name="system_id" placeholder="SystemId" maxlength="10" >
+
+        </div>
+      </div>
+
+        <div class="form-row">
+        <div class="form-group col-md-4">
+        <label for="name">Roll No</label>
+           
+            <input type="number" class="form-control" name="rollno" placeholder="Roll no" maxlength="10" >
+
+        </div>
+
+        <div class="form-group col-md-4">
+<label for="name">Course</label>
+           
+
+            <input type="text" class="form-control" name="course" placeholder="Course" >
+
+        </div>
+  
+         <div class="form-group col-md-4">
+<label for="name">Branch</label>
+        <input type="text" class="form-control" name="branch" placeholder="Branch" >
+
+        </div>
+      </div>
+        <div class="form-row">
+          <div class="form-group col-md-4">
+    <label for="sectionchange">Section</label>
+    <select class="form-control" name="section"  >
+      <option>A</option>
+      <option>B</option>
+      <option>C</option>
+      <option>D</option>
+    </select>
+  </div>
+         <div class="form-group col-md-4">
+<label for="name">Phone  number</label>
+        <input type="tel" maxlength="10" class="form-control" name="phonenumber" placeholder="phonenumber" >
+
+</div>
+
+</div>
+  <div class="form-row">
+             <div class="form-group col-md-4">
+<label for="name">10th percentage</label>
+        <input type="text" class="form-control" name="ten" placeholder="10th percentage" >
+
+        </div>
+         <div class="form-group col-md-4">
+<label for="name">12th percentage</label>
+        <input type="text" class="form-control" name="twelve" placeholder="12th percentage" >
+
+        </div>
+         <div class="form-group col-md-4">
+<label for="name">Btech CGPA</label>
+        <input type="text" class="form-control" name="btech" placeholder="Btech CGPA" >
+
+        </div>
+      </div>
+      <div class="form-row">
+         <div class="form-group col-md-6">
+<label for="name">Backlogs</label>
+        <input type="number" class="form-control" name="backlogs" placeholder="Backlogs" >
+
+        </div>
+       <div class="form-group col-md-6">
+  <label for="exampleInputEmail1">Email address</label>
+
+            <input type="email" class="form-control" name="email" placeholder="Email Address" >
+
+        </div>
+
+</div>
+          <button type="submit" class="btn btn-Success">Update</button>
+
+    </form>
+    </div>
+</body>
+</html>

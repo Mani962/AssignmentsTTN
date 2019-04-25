@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Update Student Profile Form</title>
+
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <!-- Bootstrap CSS File -->
+    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Libraries CSS Files -->
+    <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+    <!-- Main Stylesheet File -->
+    <link href="UpdateProfilestyle.css" rel="stylesheet">
+
+    <style type="text/css">
+
+        form{
+            border: 5rem solid #a1a4a8;
+            border-radius: 16px;
+            box-sizing: border-box;
+            color:#494c4b;
+            max-width: 100rem;
+            flex: 2;
+        }
+
+        .header{
+            background-color: #a1a4a8;
+            color: #ffffff;
+            padding: 0.5rem;
+        }
+        .container{
+            padding: 1rem;
+        }
+        input[type=text],select,textarea{
+            width: 50rem;
+            padding: 0.2rem;
+            border: 0.05rem solid #a1a4a8;
+            border-radius: 8px;
+
+        }
+        #version{
+            width: auto;
+            padding: 0.2rem;
+            border: 0.05rem solid #a1a4a8;
+            border-radius: 8px;
+        }
+        input[type=file]{
+            width: 50rem;
+            padding: 0.2rem;
+            border: 0.05rem solid #a1a4a8;
+            border-radius: 8px;
+            display: inline-block;
+            cursor: pointer;
+        }
+        .dropdown{
+            background-color: #4ab28e;
+            border: 0.1rem solid #4ab28e;
+            font-weight: bold;
+            padding: 0.2rem;
+            color: #ffffff;
+        }
+        .btn{
+            margin: 1rem;
+            background-color: #4ab28e;
+            border: 0.2rem solid #4ab28e;
+            border-radius: 0.3rem;
+            font-weight: bold;
+            padding: 0.2rem;
+            color: #ffffff;
+            float: right;
+            width: 50%;
+        }
+        .desc{
+            margin-bottom: 0;
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.5;
+            color: #495057;
+            text-align: center;
+            border-radius: 0.25rem;
+        }
+        a{
+            text-decoration: none;
+            color: #217c91;
+            margin-left: 1rem;
+        }
+    </style>
+</head>
+<body>
+<header style=" margin:0 1rem 0 1rem; display: flex;">
+    <div style="flex: 3">
+        <a href="#">Sharda University</a>
+    </div>
+    <div style="flex: 1;">
+        <a href="#">Home</a>
+        <a href="#">Quick Help</a>
+    </div>
+</header><br>
+<div style="display: flex;">
+    <div style="flex: 1;"></div>
+    <form>
+        <header class="header"> Student Information</header>
+
+        <div class="form-row">
+
+            <div class="form-group col-md-6">
+                <label >Username</label>
+                <input type="text" class="form-control" name="username"th:text="${email}" readonly>
+
+            </div>
+            <div class="form-group col-md-6">
+                <label for="name">System Id</label>
+
+                <input type="number" class="form-control" name="system_id" placeholder="SystemId" maxlength="10" >
+
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group col-md-4">
+                <label for="name">Roll No</label>
+
+                <input type="number" class="form-control" name="rollno" placeholder="Roll no" maxlength="10" >
+
+            </div>
+
+            <div class="form-group col-md-4">
+                <label for="name">Course</label>
+
+
+                <input type="text" class="form-control" name="course" placeholder="Course" >
+
+            </div>
+
+            <div class="form-group col-md-4">
+                <label for="name">Branch</label>
+                <input type="text" class="form-control" name="branch" placeholder="Branch" >
+
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-4">
+                <label for="sectionchange">Section</label>
+                <select class="form-control" name="section"  >
+                    <option>A</option>
+                    <option>B</option>
+                    <option>C</option>
+                    <option>D</option>
+                </select>
+            </div>
+            <div class="form-group col-md-4">
+                <label for="name">Phone  number</label>
+                <input type="tel" maxlength="10" class="form-control" name="phonenumber" placeholder="phonenumber" >
+
+            </div>
+
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-4">
+                <label for="name">10th percentage</label>
+                <input type="text" class="form-control" name="ten" placeholder="10th percentage" >
+
+            </div>
+            <div class="form-group col-md-4">
+                <label for="name">12th percentage</label>
+                <input type="text" class="form-control" name="twelve" placeholder="12th percentage" >
+
+            </div>
+            <div class="form-group col-md-4">
+                <label for="name">Btech CGPA</label>
+                <input type="text" class="form-control" name="btech" placeholder="Btech CGPA" >
+
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="name">Backlogs</label>
+                <input type="number" class="form-control" name="backlogs" placeholder="Backlogs" >
+
+            </div>
+            <div class="form-group col-md-6">
+                <label for="exampleInputEmail1">Email address</label>
+
+                <input type="email" class="form-control" name="email" placeholder="Email Address" >
+
+            </div>
+
+        </div>
+        <button type="submit" class="btn btn-Success">Update</button>
+
+        <hr style="margin: 0;">
+        <footer style="display: flow-root; background-color: #d6d6d6;border-radius: 8px;">
+            <button class="btn" type="input">Send</button>
+        </footer>
+    </form>
+    <div style="flex: 1;"></div>
+</div>
+</body>
+</html>

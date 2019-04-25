@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Update Student Profile Form</title>\
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style type="text/css">
+
+
+        form {
+            border: 0.1rem solid #a1a4a8;
+            border-radius: 8px;
+            box-sizing: border-box;
+            color: #494c4b;
+            max-width: 50rem;
+            flex: 1;
+        }
+
+        .header {
+            background-color: #a1a4a8;
+            color: #ffffff;
+            padding: 1rem;
+        }
+
+        .container {
+            padding: 1rem;
+        }
+
+        #version {
+            width: auto;
+            padding: 1rem;
+            border: 0.05rem solid #a1a4a8;
+            border-radius: 8px;
+        }
+
+        .dropdown {
+            background-color: #4ab28e;
+            border: 0.1rem solid #4ab28e;
+            font-weight: bold;
+            padding: 0.2rem;
+            color: #ffffff;
+        }
+
+        .btn {
+            margin: 1rem;
+            background-color: #4ab28e;
+            border: 0.2rem solid #4ab28e;
+            border-radius: 0.3rem;
+            font-weight: bold;
+            padding: 0.5rem;
+            color: #ffffff;
+            float: left;
+            width: 30%;
+        }
+
+        .desc {
+            margin-bottom: 0;
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.5;
+            color: #495057;
+            text-align: center;
+            border-radius: 0.25rem;
+        }
+
+        a {
+            text-decoration: none;
+            color: #217c91;
+            margin-left: 1rem;
+        }
+    </style>
+</head>
+<body>
+<header style=" margin:0 1rem 0 1rem; display: flex;">
+    <div style="flex: 3">
+        <a href="#">Sharda University</a>
+    </div>
+    <div style="flex: 1;">
+        <a href="#">Home</a>
+        <a href="#">Quick Help</a>
+    </div>
+</header>
+<br>
+ <div style="display: flex;">
+    <div style="flex: 1;"></div>
+    <form>
+        <header class="header"> Student Information</header>
+        <div class="container">
+            <div class="form-group">
+                <label>Roll no*</label>
+                <input type="number" class="form-control" placeholder="number">
+            </div>
+
+            <div class="form-group">
+                <label for="exampleInputEmail1">Email address</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                       placeholder="Enter email">
+                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.
+                </small>
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Password</label>
+                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+            </div>
+            <div class="form-group">
+                <label>Username</label>
+                <input type="text" class="form-control" name="username" th:text="${email}" readonly>
+            </div>
+
+            <div class="form-group">
+                <label for="name">System Id</label>
+                <input type="number" class="form-control" name="system_id" placeholder="SystemId" maxlength="10">
+            </div>
+            <div class="form-group">
+                <label for="name">Roll No</label>
+
+                <input type="number" class="form-control" name="rollno" placeholder="Roll no" maxlength="10">
+            </div>
+            <div class="form-group">
+                <label for="name">Course</label>
+                <input type="text" class="form-control" name="course" placeholder="Course">
+            </div>
+
+            <div class="form-group">
+                <label for="name">Branch</label>
+                <input type="text" class="form-control" name="branch" placeholder="Branch">
+            </div>
+            <div class="form-group">
+                <label for="sectionchange">Section</label>
+                <select class="form-control" name="section">
+                    <option>A</option>
+                    <option>B</option>
+                    <option>C</option>
+                    <option>D</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="name">Phone number</label>
+                <input type="tel" maxlength="10" class="form-control" name="phonenumber" placeholder="phonenumber">
+            </div>
+            <div class="form-group">
+                <label for="name">10th percentage</label>
+                <input type="text" class="form-control" name="ten" placeholder="10th percentage">
+            </div>
+            <div class="form-group">
+                <label for="name">12th percentage</label>
+                <input type="text" class="form-control" name="twelve" placeholder="12th percentage">
+            </div>
+            <div class="form-group">
+                <label for="name">Btech CGPA</label>
+                <input type="text" class="form-control" name="btech" placeholder="Btech CGPA">
+            </div>
+            <div class="form-group">
+                <label for="name">Backlogs</label>
+                <input type="number" class="form-control" name="backlogs" placeholder="Backlogs">
+            </div>
+            <div class="form-group">
+
+                <label for="exampleInputEmail1">Email address</label>
+
+                <input type="email" class="form-control" name="email" placeholder="Email Address">
+            </div>
+            <div class="form-group">
+                <label>Description*</label><br>
+                <textarea class="desc" type="text" name=""></textarea><br><br>
+            </div>
+            <div class="form-group">
+                <label>Operating System*</label><br>
+                <select class="dropdown" name="Operating Systems">
+                    <option value="Windows XP">Windows XP</option>
+                    <option value="Ubuntu">Ubuntu</option>
+                    <option value="Mac OS">Mac OS</option>
+                    <option value="Windows 10">Windows 10</option>
+                </select><br><br>
+            </div>
+            <div class="form-group">
+                <label>Product*</label><br>
+                <select class="dropdown" name="Product">
+                    <option value="Formold">Formold</option>
+                    <option value="Formold">Formold</option>
+                    <option value="Formold">Formold</option>
+                    <option value="Formold">Formold</option>
+                </select><br><br>
+            </div>
+            <div class="form-group">
+                <label>Version*</label><br>
+                <input id="version" type="text" name=""><br><br>
+            </div>
+            <div class="form-group">
+                <label>License:</label><br>
+                <input type="radio" name="License">Free
+                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+            </div>
+                <div class="form-group">
+                    <input type="radio" name="License">Business<br><br>
+
+                    <label>Severity:</label><br>
+                    <select class="dropdown" name="Severity">
+                        <option value="CriticalStage1">CriticalStage1</option>
+                        <option value="CriticalStage2">CriticalStage2</option>
+                        <option value="CriticalStage3">CriticalStage3</option>
+                        <option value="CriticalStage4">CriticalStage4</option>
+                    </select><br><br>
+                </div>
+            <div class="form-group">
+                <label>Attachments:</label><br>
+                <input type="file" name="file">
+            </div>
+            </div>
+
+            <hr style="margin: 0;">
+            <footer style="display: flow-root; background-color: #d6d6d6;border-radius: 8px;">
+                <button class="btn" type="input">Update</button>
+            </footer>
+    </form>
+    <div style="flex: 1;"></div>
+</div>
+</body>
+</html>
